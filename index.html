@@ -1,61 +1,46 @@
 <!doctype html>
 <html lang="pt-br">
+  ```html
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Valdernandescode" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
-      content="Portfólio de um desenvolvedor front-end focado em interfaces modernas, performance, acessibilidade e experiências digitais memoráveis."
+      content="Portfólio de Júnior Silva, desenvolvedor Full-Stack especializado em HTML, CSS e JavaScript."
     />
-    <meta
-      name="keywords"
-      content="desenvolvedor Full-Stack, ui, ux, interfaces, portfólio, javascript, react, next.js, html, css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#986DFF" />
-    <meta name="robots" content="index, follow" />
-    <meta name="copyright" content="JuniorCode 2025" />
-    <meta http-equiv="content-language" content="pt-br" />
+
+    <meta name="author" content="Júnior Silva" />
+
+    <meta name="theme-color" content="#000000" />
+
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://juniorcode.com/" />
     <meta
-      property="og:image"
-      content="https://juniorcode.com/assets/image/preview.png"
+      property="og:title"
+      content="Júnior Silva | Desenvolvedor Full-Stack"
     />
-    <meta property="og:title" content="JuniorCode | Desenvolvedor Front-end" />
     <meta
       property="og:description"
-      content="Portfólio de um desenvolvedor front-end focado em interfaces modernas, performance e experiência de produto."
+      content="Portfólio de Júnior Silva, desenvolvedor Full-Stack especializado em HTML, CSS e JavaScript."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="https://cdn-icons-png.flaticon.com/512/9920/9920501.png"
-      type="image/x-icon"
-    />
-    <link rel="apple-touch-icon" href="assets/image/logo-page.svg" />
-    <link rel="canonical" href="https://juniorcode.com/" />
-    <title>JuniorCode | Desenvolvedor Full-Stack</title>
+
+    <link rel="icon" href="assets/image/logo-page.svg" type="image/svg+xml" />
+
+    <title>Júnior Silva | Desenvolvedor Full-Stack</title>
   </head>
+  ```
 
   <body>
+    <canvas id="code-bg" aria-hidden="true"></canvas>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="site-header" id="site-header">
       <div class="grid-layout">
         <a class="brand" href="#s-home" aria-label="Voltar para o início">
-          <span class="brand-mark"
-            ><img
-              src="https://cdn-icons-png.flaticon.com/512/9920/9920501.png"
-              alt=""
-          /></span>
-          <span class="brand-text">JúniorCode</span>
+          <span class="brand-text">Júnior Silva</span>
         </a>
 
         <button
@@ -90,17 +75,18 @@
         <div class="grid-layout">
           <div class="hero-shell">
             <div class="hero-content reveal-on-load">
-              <p class="hero-eyebrow">Olá, eu sou JúniorCode</p>
-              <h1>Desenvolvedor FullStack Junior</h1>
+              <p class="hero-eyebrow">Olá, eu sou Júnior Silva</p>
+              <h1>
+                Desenvolvedor <span class="text-accent">Full-Stack</span> Junior
+              </h1>
               <p class="hero-subtitle">
-                Transformo ideias em experiências digitais claras, rápidas e
-                memoráveis, com forte atenção a performance, acessibilidade e
-                resultado de negócio.
+                Crio sites funcionais, limpos e responsivos usando HTML, CSS e
+                JavaScript.
               </p>
 
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#s-projects">Projetos</a>
-                <a class="btn btn-secondary" href="#s-faq">Contato</a>
+                <a class="btn btn-secondary" href="#s-contact">Contato</a>
                 <a class="btn btn-ghost" href="./cv.pdf" download>
                   Download CV
                 </a>
@@ -137,14 +123,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="hero-particles" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
       </section>
 
@@ -215,7 +193,7 @@
       <section id="s-projects" class="projects-section reveal-on-load">
         <div class="grid-layout">
           <div class="projects-intro">
-            <p class="section-kicker">Projetos Clientes Reais</p>
+            <p class="section-kicker">Projetos Clientes Reais e Modelos</p>
             <h2>Projetos Desenvolvidos de Acordo Como O Cliente Solicitou.</h2>
             <p>
               Cada projeto representa uma etapa da minha evolução como
@@ -634,6 +612,7 @@
             </button>
             <button class="filter-btn" type="button" data-filter="superior">
               Certificado Superior Graduação
+            </button>
           </div>
 
           <div class="certificates-grid">
@@ -715,7 +694,7 @@
             <div class="contact-copy">
               <p class="section-kicker">Contato</p>
               <h2>Vamos conversar sobre seu próximo projeto.</h2>
-              <p>
+              <p id="contact-help">
                 Preencha o formulário ou use um dos canais abaixo para entrar em
                 contato. Respondo com atenção e rapidez.
               </p>
@@ -869,35 +848,6 @@
               <button class="submit-btn" type="submit">Enviar</button>
               <p class="form-status" aria-live="polite"></p>
             </form>
-            <script>
-              const form = document.getElementById("contact-form");
-
-              form.addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                const name = form.name.value;
-                const email = form.email.value;
-                const subject = form.subject.value;
-                const message = form.message.value;
-
-                const texto = `*📩 Novo Contato*
-
-*👤 Nome:* ${name}
-
-*📧 Email:* ${email}
-
-*📝 Assunto:* ${subject}
-
-*💬 Mensagem:*
-${message}`;
-
-                const numero = "+5562993297215"; // Seu número
-
-                const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-                window.open(url, "_blank");
-              });
-            </script>
           </div>
         </div>
       </section>
@@ -995,12 +945,7 @@ ${message}`;
           <div class="footer-card">
             <div class="footer-brand">
               <a class="brand" href="#s-home" aria-label="Voltar para o início">
-                <span class="brand-mark"
-                  ><img
-                    src="https://cdn-icons-png.flaticon.com/512/9920/9920501.png"
-                    alt=""
-                /></span>
-                <span class="brand-text">JúniorCode</span>
+                <span class="brand-text">Júnior Silva</span>
               </a>
               <p>
                 Desenvolvimento Full-Stack com foco em interfaces modernas,
@@ -1088,7 +1033,7 @@ ${message}`;
 
           <div class="footer-bottom">
             <p>
-              © <span data-current-year></span> JuniorCode. Todos os direitos
+              © <span data-current-year></span> Júnior Silva. Todos os direitos
               reservados.
             </p>
             <a class="back-to-top" href="#s-home" aria-label="Voltar ao topo"

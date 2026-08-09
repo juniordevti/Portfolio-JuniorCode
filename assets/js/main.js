@@ -84,6 +84,7 @@ filterButtons.forEach((button) => {
 
 // Formulário de contato
 const contactForm = document.getElementById("contact-form");
+const whatsappPhone = "5562993297215";
 
 if (contactForm) {
   const fields = {
@@ -166,10 +167,17 @@ if (contactForm) {
       return;
     }
 
+    const message = `*📩 Novo contato*\n\n*👤 Nome:* ${fields.name.value.trim()}\n*📧 Email:* ${fields.email.value.trim()}\n*📝 Assunto:* ${fields.subject.value.trim()}\n\n*💬 Mensagem:*\n${fields.message.value.trim()}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(
+      message,
+    )}`;
+
     contactForm.classList.add("is-success");
     statusElement.textContent =
-      "Mensagem enviada com sucesso! Aguarde o retorno.";
+      "Mensagem validada. Abrindo WhatsApp para enviar...";
     statusElement.style.color = "#7de0ad";
+
+    window.open(whatsappUrl, "_blank", "noopener");
 
     contactForm.reset();
     Object.entries(fields).forEach(([name]) => {
@@ -178,4 +186,47 @@ if (contactForm) {
       errorElements[name].textContent = "";
     });
   });
+}
+
+const canvas = document.getElementById("code-bg");
+const ctx = canvas?.getContext("2d");
+
+if (canvas && ctx) {
+  const fontSize = 16;
+  const letters =
+    "日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let columns = Math.floor(window.innerWidth / fontSize);
+  const drops = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    drops.length = 0;
+    for (let x = 0; x < columns; x += 1) {
+      drops[x] = canvas.height;
+    }
+  }
+
+  function drawMatrix() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#0F0";
+    ctx.font = `${fontSize}px monospace`;
+
+    for (let i = 0; i < drops.length; i += 1) {
+      const text = letters.charAt(Math.floor(Math.random() * letters.length));
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i] += 1;
+    }
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+  setInterval(drawMatrix, 33);
 }

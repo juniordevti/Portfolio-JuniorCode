@@ -12,6 +12,7 @@ export function menu() {
     nav.classList.toggle("is-open", isOpen);
     menuToggle.classList.toggle("is-open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    nav.setAttribute("aria-hidden", String(!isOpen));
     document.body.classList.toggle("menu-open", isOpen);
   };
 
@@ -22,18 +23,20 @@ export function menu() {
   };
 
   menuToggle.addEventListener("click", () => {
-    console.log("Botão clicado");
-
     const isOpen = nav.classList.contains("is-open");
     setMenuState(!isOpen);
-
-    console.log(nav.classList);
   });
 
-  // menuToggle.addEventListener("click", () => {
-  //   const isOpen = nav.classList.contains("is-open");
-  //   setMenuState(!isOpen);
-  // });
+  const closeMenuOnOutsideClick = (event) => {
+    if (
+      nav.classList.contains("is-open") &&
+      window.innerWidth <= 992 &&
+      !nav.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      setMenuState(false);
+    }
+  };
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -42,6 +45,8 @@ export function menu() {
       }
     });
   });
+
+  document.addEventListener("click", closeMenuOnOutsideClick);
 
   window.addEventListener("scroll", handleScroll, { passive: true });
   window.addEventListener("resize", () => {
