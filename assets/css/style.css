@@ -625,7 +625,12 @@ main {
 }
 
 .projects-grid {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.projects-section {
+  overflow: visible;
 }
 
 @media screen and (max-width: 1024px) {
@@ -643,11 +648,17 @@ main {
   .faq-grid {
     grid-template-columns: 1fr;
   }
+
+  .projects-grid {
+    display: grid !important;
+    width: 100%;
+  }
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
   min-height: 100%;
 }
 
