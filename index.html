@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
-  ```html
+  
   <head>
     <meta charset="UTF-8" />
 
@@ -31,15 +31,20 @@
 
     <title>Júnior Silva | Desenvolvedor Front-end</title>
   </head>
-  ```
 
   <body>
+    <div class="neon-cursor" aria-hidden="true">
+  <span class="neon-core"></span>
+  <span class="neon-ring"></span>
+</div>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="site-header" id="site-header">
       <div class="grid-layout">
         <a class="brand" href="#s-home" aria-label="Voltar para o início">
-          <span class="brand-text">Júnior Silva</span>
+          <span class="brand-text">
+            <span class="brand-symbol">&lt;</span> Júnior Silva <span class="brand-symbol">/&gt;</span>
+          </span>
         </a>
 
         <button
@@ -62,6 +67,7 @@
             <li><a class="nav-link" href="#s-certificates">Certificados</a></li>
             <li><a class="nav-link" href="#s-contact">Contato</a></li>
             <li><a class="nav-link" href="#s-faq">FAQ</a></li>
+            <li><a class="nav-link" href="#s-repos">Repositórios</a></li>
           </ul>
 
           <a class="nav-cta" href="#s-contact">Contato</a>
@@ -435,7 +441,7 @@
 
           <div class="projects-grid">
             <!-- barbearia -->
-            <article class="project-card">
+            <!-- <article class="project-card">
               <div class="project-media">
                 <img
                   src="./assets/image/herobarbearia.png"
@@ -507,7 +513,7 @@
                     rel="noopener noreferrer"
                     >Visitar Site</a
                   >
-                  <!-- <a href="#s-contact">Conversar</a> -->
+                  <a href="#s-contact">Conversar</a>
                 </div>
               </div>
             </article>
@@ -533,7 +539,7 @@
                     gap: 10px;
                   "
                 >
-                  Lara e Glaucia
+                  Rota dos Parças Restaurante <br>E-Commerce
                   <span
                     style="
                       display: inline-flex;
@@ -569,7 +575,7 @@
                 </div>
                 <div class="project-actions">
                   <!-- <a
-              href="https://landig-page-lara-glaucia.vercel.app/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               >Visitar Site</a
@@ -600,7 +606,7 @@
                     gap: 10px;
                   "
                 >
-                  Lee Tattoo
+                  Lee Tattoo Landing Page
                   <span
                     style="
                       display: inline-flex;
@@ -666,7 +672,7 @@
                     gap: 10px;
                   "
                 >
-                  Legends Clan
+                  Legends Clan Site Gamer
                   <span
                     style="
                       display: inline-flex;
@@ -705,6 +711,88 @@
                     rel="noopener noreferrer"
                     >Visitar Site</a
                   >
+                  <!-- <a href="#s-contact">Conversar</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img
+                  src="./assets/image/perfumaria.png"
+                  alt="Legends Clan"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <div class="project-content">
+                <h3
+                  style="
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                  "
+                >
+                  Perfumaria E-Commerce
+                  <span
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      padding: 5px 10px;
+                      font-size: 10px;
+                      font-weight: 700;
+                      letter-spacing: 1px;
+                      line-height: 1;
+                      color: #fbbf24;
+                      background: rgba(251, 191, 36, 0.1);
+                      border: 1px solid rgba(251, 191, 36, 0.3);
+                      border-radius: 4px;
+                      white-space: nowrap;
+                    "
+                  >
+                    ⏳ EM ANDAMENTO
+                  </span>
+                </h3>
+
+                
+                <p>
+                    Projeto de e-commerce para uma perfumaria, desenvolvido
+                    com foco na comercialização de perfumes, cosméticos e
+                    produtos de beleza. A aplicação contempla catálogo
+                    digital, gerenciamento de produtos, carrinho de compras,
+                    integração com meios de pagamento, controle de pedidos
+                    e painel administrativo. A arquitetura busca oferecer
+                    segurança, escalabilidade, boa experiência do usuário
+                    e responsividade em dispositivos móveis.
+                  </p>
+
+                  <div class="project-tags">
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>PostgreSQL</span>
+                    <span>Prisma ORM</span>
+                    <span>REST API</span>
+                    <span>JWT</span>
+                    <span>Mercado Pago</span>
+                    <span>Cloudinary</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Vercel</span>
+                    <span>Railway</span>
+                  </div>
+                <!-- <div class="project-actions">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visitar Site</a
+                  > -->
                   <!-- <a href="#s-contact">Conversar</a> -->
                 </div>
               </div>
@@ -952,6 +1040,99 @@
           </div>
         </div>
       </section>
+
+      <section id="s-repos" class="repos-section">
+  <div class="grid-layout">
+    <div class="projects-intro">
+      <p class="section-kicker">Open Source</p>
+      <h2>Repositórios Acadêmicos</h2>
+      <p>
+        Copie o comando, rode no seu terminal e explore o código dos meus
+        projetos.
+      </p>
+    </div>
+<!-- menu de navegação dos repositorios -->
+    <div class="repos-tabs" role="tablist" aria-label="Filtrar repositórios">
+      <button class="repos-tab is-active" role="tab" aria-selected="true" data-repo-filter="all">Todos</button>
+      <button class="repos-tab" role="tab" aria-selected="false" data-repo-filter="landing">Landing Pages</button>
+      <button class="repos-tab" role="tab" aria-selected="false" data-repo-filter="app">AI</button>
+    </div>
+
+    <div class="repos-grid">
+
+      <!-- sitesweb -->
+      <article class="repo-card" data-repo-category="landing">
+        <header class="repo-card__head">
+          <span class="repo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <h3>Gerador de Prompts em MD</h3>
+        </header>
+        <p class="repo-desc">Gerador de prompts para uso em Markdown.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="repo-cmd">
+          <code>git clone https://github.com/juniordevti/gerador.git</code>
+          <button class="repo-copy" type="button" aria-label="Copiar comando git clone">Copiar</button>
+        </div>
+        <a class="repo-link" href="https://github.com/juniordevti/gerador" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+      </article>
+      <!-- aplicativos no visualstudio -->
+       <article class="repo-card" data-repo-category="app">
+        <header class="repo-card__head">
+          <span class="repo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <h3>Assistente Virtual AI</h3>
+        </header>
+        <p class="repo-desc">Assistente virtual para atendimento automatizado.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="repo-cmd">
+          <code>git clone https://github.com/juniordevti/assistente-virtual.git</code>
+          <button class="repo-copy" type="button" aria-label="Copiar comando git clone">Copiar</button>
+        </div>
+        <a class="repo-link" href="https://github.com/juniordevti/assistente-virtual" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+      </article>
+
+      <article class="repo-card" data-repo-category="app">
+        <header class="repo-card__head">
+          <span class="repo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <h3>Sistema Acadêmico FARMAEDUK FarmCOINS UNICEUG</h3>
+        </header>
+        <p class="repo-desc">Sistema acadêmico TCC</p>
+        <div class="project-tags"><span>React</span><span>SQL</span><span>Tailwind CSS</span> <span>PostgreeSQL</span></div>
+        <div class="repo-cmd">
+          <code>git clone https://github.com/juniordevti/Academico-Farmaeduk-UNICEUG.git</code>
+          <button class="repo-copy" type="button" aria-label="Copiar comando git clone">Copiar</button>
+        </div>
+        <a class="repo-link" href="https://github.com/juniordevti/Academico-Farmaeduk-UNICEUG" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+      </article>
+
+      <!-- <article class="repo-card" data-repo-category="landing">
+        <header class="repo-card__head">
+          <span class="repo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <h3>*****</h3>
+        </header>
+        <p class="repo-desc">****</p>
+        <div class="project-tags"><span>***</span><span>***</span>****</span></div>
+        <div class="repo-cmd">
+          <code></code>
+          <button class="repo-copy" type="button" aria-label="Copiar comando git clone">Copiar</button>
+        </div>
+        <a class="repo-link" href="" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+      </article> -->
+
+      <article class="repo-card" data-repo-category="app">
+        <header class="repo-card__head">
+          <span class="repo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <h3>Simulador de Digitação Auxiliar Motor Para Digitar</h3>
+        </header>
+        <p class="repo-desc">Sistema de simulação para auxiliar na digitação com teclado futurista desenvolvido em python</p>
+        <div class="project-tags"><span>Python</span><span>Simulação</span><span>Teclado</span></div>
+        <div class="repo-cmd">
+          <code>git clonehttps://github.com/juniordevti/Teclado-Auxiliar-Motor.git</code>
+          <button class="repo-copy" type="button" aria-label="Copiar comando git clone">Copiar</button>
+        </div>
+        <a class="repo-link" href="https://github.com/juniordevti/Teclado-Auxiliar-Motor" target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+      </article>
+    </div>
+  </div>
+</section>
 
       <section id="s-certificates" class="reveal-on-load">
         <div class="grid-layout">
@@ -1362,7 +1543,9 @@
           <div class="footer-card">
             <div class="footer-brand">
               <a class="brand" href="#s-home" aria-label="Voltar para o início">
-                <span class="brand-text">Júnior Silva</span>
+                <span class="brand-text">
+                  <span class="brand-symbol">&lt;</span> Júnior Silva <span class="brand-symbol">/&gt;</span>
+                </span>
               </a>
               <p>
                 Desenvolvimento Full-Stack com foco em interfaces modernas,
@@ -1462,5 +1645,6 @@
     </main>
 
     <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/cursor.js"></script>
   </body>
 </html>
